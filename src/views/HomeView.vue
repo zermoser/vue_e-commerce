@@ -6,7 +6,6 @@ const eiei  = '5555'
 <template>
   <div>
   <h1 class="text-3xl font-bold underline">
-    Hello world!
     {{ eiei }}
   </h1>
 </div>
