@@ -1,4 +1,5 @@
 <script setup>
+const eiei  = '5555'
 
 </script>
 
@@ -6,6 +7,7 @@
   <div>
   <h1 class="text-3xl font-bold underline">
     Hello world!
+    {{ eiei }}
   </h1>
 </div>
 </template>
