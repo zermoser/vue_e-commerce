@@ -29,7 +29,7 @@ const logout = () => {
   <div class="max-w-screen-xl mx-auto">
     <div class="navbar bg-base-100">
       <div class="flex-1">
-        <RouterLink to="/" class="btn btn-ghost normal-case text-xl">Mikelopster Shop</RouterLink>
+        <RouterLink to="/" class="btn btn-ghost normal-case text-xl">Mos Shop</RouterLink>
       </div>
       <div class="flex-none">
         <div class="form-control">
@@ -65,7 +65,7 @@ const logout = () => {
         <div v-else class="dropdown dropdown-end">
           <label tabindex="0" class="btn btn-ghost btn-circle avatar">
             <div class="w-10 rounded-full">
-              <img src="https://mikelopster.dev/mikelopster.da6b9a03.webp" />
+              <img src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/9970/live/9e4ab180-fd11-11ed-b2aa-9935735a579c.png" />
             </div>
           </label>
           <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
