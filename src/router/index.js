@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '@/views/user/homeView.vue'
-import Search from '@/views/user/searchView.vue'
-import Profile from '@/views/user/profileView.vue'
-import Success from '@/views/user/successView.vue'
-import Checkout from '@/views/user/checkoutView.vue'
-import Cart from '@/views/user/cartView.vue'
+import Home from '@/views/user/HomeView.vue'
+import Search from '@/views/user/SearchView.vue'
+import Profile from '@/views/user/ProfileView.vue'
+import Success from '@/views/user/SuccessView.vue'
+import Checkout from '@/views/user/CheckoutView.vue'
+import Cart from '@/views/user/CartView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

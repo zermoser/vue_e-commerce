@@ -1,9 +1,10 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import { RouterLink } from 'vue-router'
+import { RouterLink , useRouter } from 'vue-router'
 const isLoggedIn = ref(false)
 
-// const router = useRouter()
+const router = useRouter()
+const searchText = ref('')
 
 onMounted(() => {
   if (localStorage.getItem('login')) {
@@ -23,6 +24,18 @@ const logout = () => {
   localStorage.removeItem('checkout-data')
   window.location.reload()
 }
+
+  // สร้าง function ดักตาม Enter
+  const handleEnter = (event) => {
+    if (event.key === 'Enter') {
+      router.push({
+        name: 'search',
+        query: {
+          q: searchText.value
+        }
+      })
+    }
+  }
 </script>
 
 <template>
@@ -37,6 +50,7 @@ const logout = () => {
             type="text"
             v-model="searchText"
             placeholder="Search"
+            @keyup="handleEnter" 
             class="input input-bordered w-24 md:w-auto"
           />
         </div>
