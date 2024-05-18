@@ -55,7 +55,7 @@ const removeItemInCart = (index) => {
                   </div>
                 </div>
                 <p class="flex">
-                  <CheckIcon class="w-5 shrink-0" />
+                  <CheckIcon />
                   <span>In stock</span>
                 </p>
               </div>

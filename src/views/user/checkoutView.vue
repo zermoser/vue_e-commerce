@@ -70,7 +70,7 @@ const checkout = () => {
             </button>
           </div>
         </section>
-        <section class="flex-auto w-32 bg-slate-200">
+        <section class="flex-auto w-32 bg-slate-800">
           <div class="px-8">
             <ul>
               <li v-for="(item, index) in userCartStore.items" class="px-2 flex py-6" :key="index">
@@ -91,7 +91,7 @@ const checkout = () => {
                 </div>
               </li>
             </ul>
-            <div class="divider"></div>
+            <div class="divider" />
             <div class="mb-4">
               <h2 class="text-2xl">Order summary</h2>
               <div class="mt-4 m-0">
@@ -103,7 +103,7 @@ const checkout = () => {
                   <div class="font-bold">ค่าส่ง</div>
                   <div>0</div>
                 </div>
-                <div class="divider"></div>
+                <div class="divider" />
                 <div class="flex align-middle justify-between mb-2">
                   <div class="font-bold">ราคาทั้งสิ้น</div>
                   <div>{{ userCartStore.summaryPrice }}</div>

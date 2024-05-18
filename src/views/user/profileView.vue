@@ -68,7 +68,7 @@ const updateProfile = () => {
           />
         </div>
 
-        <button class="btn btn-primary w-full mt-4" @click="updateProfile">Update profile</button>
+        <button class="btn btn-primary w-full text-white mt-4" @click="updateProfile">อัปเดตโปรไฟล์</button>
       </div>
     </div>
   </UserLayout>
