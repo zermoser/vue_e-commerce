@@ -1,7 +1,7 @@
 <script setup>
 import UserLayout from '@/layouts/UserLayout.vue'
-// import RightIcon from '@/components/icons/Right.vue'
-// import CloseIcon from '@/components/icons/Close.vue'
+import CheckIcon from '@/components/icons/Check.vue'
+import CloseIcon from '@/components/icons/Close.vue'
 
 import { RouterLink, useRouter } from 'vue-router'
 import { useUserCartStore } from '@/stores/user/cart'
@@ -50,21 +50,21 @@ const removeItemInCart = (index) => {
                       </option>
                     </select>
                     <div @click="removeItemInCart(index)" class="absolute top-0 right-0 cursor-pointer">
-                      <!-- <CloseIcon class="w-5"></CloseIcon> -->
+                      <CloseIcon :size="24"/>
                     </div>
                   </div>
                 </div>
                 <p class="flex">
-                  <!-- <RightIcon class="w-5 shrink-0"></RightIcon> -->
+                  <CheckIcon class="w-5 shrink-0" />
                   <span>In stock</span>
                 </p>
               </div>
             </li>
           </ul>
         </section>
-        <section class="flex-auto w-32 bg-slate-200 p-8">
+        <section class="flex-auto w-32 bg-slate-900 p-8">
           <h2 class="text-2xl">Order summary</h2>
-          <div class="mt-4 m-0 divide-y divide-base-200">
+          <div class="mt-4 m-0 divide-y divide-base-500">
             <div class="flex align-middle justify-between mb-2">
               <div class="font-bold">ราคาสินค้าทั้งหมด</div>
               <div>{{ userCartStore.summaryPrice }}</div>

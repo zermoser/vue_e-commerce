@@ -1,18 +1,26 @@
 <script setup>
 import { ref, watch } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 
 import ProductList from '@/components/ProductList.vue'
 import UserLayout from '@/layouts/UserLayout.vue'
-
 import { useUserProductStore } from '@/stores/user/product'
+import { useUserCartStore } from '@/stores/user/cart'
+
+const userCartStore = useUserCartStore()
 
 const userProductStore = useUserProductStore()
 
 const route = useRoute()
+const router = useRouter()
 
 const searchText = ref('')
 const filterProducts = ref([])
+
+const addToCart = (productData) => {
+  userCartStore.addToCart(productData)
+  router.push({ name: 'cart' })
+}
 
 watch(() => route.query.q, (newSearchText) => {
   searchText.value = newSearchText
@@ -28,8 +36,8 @@ watch(() => route.query.q, (newSearchText) => {
     <div v-if="filterProducts.length > 0">
       <ProductList
         :products="filterProducts"
-      >
-      </ProductList>
+        :addToCart="addToCart"
+      />
     </div>
     <div class="m-10" v-else>
       <div class="text-center text-3xl">Product not found</div>
