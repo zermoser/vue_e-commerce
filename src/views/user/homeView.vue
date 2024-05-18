@@ -1,16 +1,19 @@
 <script setup>
-import { onMounted } from 'vue'
-
-import { useUserProductStore } from '@/stores/user/product'
-
+import { useRouter } from 'vue-router'
+import { useUserCartStore } from '@/stores/user/cart'
 import UserLayout from '@/layouts/UserLayout.vue'
 import ProductList from '@/components/ProductList.vue'
+import { useUserProductStore } from '@/stores/user/product'
 
 const userProductStore = useUserProductStore()
 
-onMounted(() => {
-  userProductStore.loadProduct()
-})
+const router = useRouter()
+
+const userCartStore = useUserCartStore()
+const addToCart = (productData) => {
+  userCartStore.addToCart(productData)
+  router.push({ name: 'cart' })
+}
 
 </script>
 
@@ -24,9 +27,11 @@ onMounted(() => {
         </div>
       </div>
     </div>
+    
     <ProductList
       :products="userProductStore.list"
-    >
+      :addToCart="addToCart"
+    > 
     </ProductList>
   </UserLayout>
 </template>

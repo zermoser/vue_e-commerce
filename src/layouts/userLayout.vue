@@ -1,10 +1,9 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { RouterLink , useRouter } from 'vue-router'
+
 const isLoggedIn = ref(false)
-
 const router = useRouter()
-
 const searchText = ref('')
 
 onMounted(() => {
