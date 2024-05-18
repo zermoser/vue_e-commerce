@@ -4,6 +4,7 @@ import { RouterLink , useRouter } from 'vue-router'
 const isLoggedIn = ref(false)
 
 const router = useRouter()
+
 const searchText = ref('')
 
 onMounted(() => {
@@ -25,6 +26,8 @@ const logout = () => {
   window.location.reload()
 }
 
+
+
   // สร้าง function ดักตาม Enter
   const handleEnter = (event) => {
     if (event.key === 'Enter') {
@@ -35,7 +38,8 @@ const logout = () => {
         }
       })
     }
-  }
+}
+
 </script>
 
 <template>
