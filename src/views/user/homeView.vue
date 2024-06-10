@@ -20,10 +20,10 @@ const addToCart = (productData) => {
 
 <template>
   <UserLayout>
-    <div class="hero min-h-60 bg-red-300">
+    <div class="hero min-h-60 bg-gray-600">
       <div class="hero-content text-center">
         <div class="max-w-md">
-          <h1 class="text-5xl font-bold">อิอิ</h1>
+          <h1 class="text-5xl font-bold">Mos Shop</h1>
           <p class="py-6">สวัสดี</p>
         </div>
       </div>
