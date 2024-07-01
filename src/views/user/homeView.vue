@@ -20,7 +20,7 @@ const addToCart = (productData) => {
 
 <template>
   <UserLayout>
-    <div class="hero min-h-60 bg-gray-600">
+    <div class="hero h-48 bg-gray-600">
       <div class="hero-content text-center">
         <div class="max-w-md">
           <h1 class="text-5xl font-bold">Mos Shop</h1>
